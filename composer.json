@@ -1,0 +1,23 @@
+{
+  "name": "eissasoubhi/wooguard",
+  "description": "WooCommerce reliability and update health prototype.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "WooGuard\\": "src/"
+    }
+  },
+  "scripts": {
+    "lint": [
+      "@php -l wooguard.php",
+      "find src -name '*.php' -print0 | xargs -0 -n1 php -l"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
